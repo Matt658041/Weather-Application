@@ -1,6 +1,10 @@
-/* Header */
+*{
+    box-sizing:border-box
+}
+
+
 header {
-    background-color: #000120
+    background-color: #3135a8
 }
 div.title {
     
