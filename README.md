@@ -1,7 +1,7 @@
 # Weather Application
  A responsive weather application using weather api
 ## 
- Built wtih HTML,CSS,Javascript, Bootstrap,JSON
+ Built wtih HTML,CSS,Javascript,Jquery,Bootstrap,JSON
  ##
  ![alt text](images/weather-app.png)
  ##
