@@ -4,7 +4,7 @@
 
 
 header {
-    background-color: #3135a8
+    background-image: linear-gradient(to bottom right, #00F490,   #00BBC9)
 }
 div.title {
     
@@ -17,7 +17,7 @@ div.title h1 {
 
 /* Main content */
 main.dashboard {
-    background-color: rgb(247, 247, 247);
+    background-color: (white)
 }
 
 /* Left Sidebar */
@@ -68,7 +68,7 @@ div.fiveDay p.card-title {
 }
 
 .card {
-    background-color: #0276fd;
+    background-image: linear-gradient(to bottom right, #00F490,   #00BBC9)
 }
 
 .text-muted {
