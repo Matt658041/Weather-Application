@@ -6,6 +6,10 @@
 header {
     background-image: linear-gradient(to bottom right, #5a9aee, #0014c9)
 }
+h2 {
+    
+    font-weight: bold;
+}
 div.title {
     
     color: white;
