@@ -1,7 +1,10 @@
 // declare variables with document.query selector
 var apiKey = 'bf17cff4e387d5594892608f7ffa180a';
-var searchButton = document.getElementById('search-btn');
-var tempList = document.querySelector('ul');
+var searchButton = document.querySelector('#search-btn');
+var tempList = document.querySelector('#temperature');
+var humidList = document.querySelector('#humidity');
+var windList = document.querySelector('#wind');
+var uvIndex = document.querySelector('#uv-index');
 
 //get a value from input element by delcaring var and then if else statment
 // and button click event handler
