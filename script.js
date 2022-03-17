@@ -31,7 +31,7 @@ var searchButton = document.querySelector('#search-btn');
 
 //format the api url and make url request
 var getWeatherApi = function() {
-    var requestUrl =' http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={apiKey}'
+    var requestUrl =' http://api.openweathermap.org/data/2.5/weather?q={city name},{state code}&appid={apiKey}'
 
   fetch(requestUrl)
   .then(function(response) {
