@@ -4,7 +4,7 @@
 
 
 header {
-    background-image: linear-gradient(to bottom right, #00F490,   #00BBC9)
+    background-image: linear-gradient(to bottom right, #5a9aee, #0014c9)
 }
 div.title {
     
@@ -68,7 +68,7 @@ div.fiveDay p.card-title {
 }
 
 .card {
-    background-image: linear-gradient(to bottom right, #00F490,   #00BBC9)
+    background-image: linear-gradient(to bottom right, #5a9aee,   #0014c9)
 }
 
 .text-muted {
