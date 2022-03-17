@@ -3,7 +3,7 @@
 ## 
  Built wtih HTML,CSS,Javascript, Bootstrap,JSON
  ##
- ![alt text](images/)
+ ![alt text](images/weather-app.png)
  ##
  https://matt658041.github.io/Weather-Application/
  ##
