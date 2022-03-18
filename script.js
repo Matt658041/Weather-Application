@@ -15,7 +15,7 @@ var searchButton = document.getElementById('search-btn');
  var cityListEl = document.querySelector('.cityList');
 
 //prevent page from refreshing// get value from input elemtent// clear old content
-var formSubmitHandler = function(event) {
+ var formSubmitHandler = function(event) {
   // prevent page from refreshing
   event.preventDefault();
 
@@ -43,7 +43,7 @@ var buttonClickHandler = function(event){
   };
 //format the api url and make url request
 var getWeatherApi = function() {
-    var requestUrl =' http://api.openweathermap.org/data/2.5/weather?q={city name},{state code}&appid={apiKey}'
+    var requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={bf17cff4e387d5594892608f7ffa180a} '
 
   fetch(requestUrl)
   .then(function(response) {
@@ -89,7 +89,7 @@ var getWeatherApi = function() {
   
        /*  create a save to local storage  */
  var saveData = function() {
-  localStorage.setItem("weather", JSON.stringify(tasks));
+  localStorage.setItem("weather", JSON.stringify(data));
 };
 
   saveData()
