@@ -14,21 +14,33 @@ var searchButton = document.getElementById('search-btn');
  var uvIndexEl = document.querySelector('#uv-index');
  var cityListEl = document.querySelector('.cityList');
 
+//prevent page from refreshing// get value from input elemtent// clear old content
+var formSubmitHandler = function(event) {
+  // prevent page from refreshing
+  event.preventDefault();
 
+  // get value from input element
+  var username = nameInputEl.value.trim();
 
-  // append span and p element to parent li
-  weatherList.append(taskSpan, taskP);
+  if (username) {
+    getUserRepos(username);
 
-
-  // append to ul list on the page
-  $("#list-" + taskList).append(taskLi);
-
-
-
-
-//get a value from input element by delcaring var and then if else statment
-
-
+    // clear old content
+    repoContainerEl.textContent = '';
+    nameInputEl.value = '';
+  } else {
+    alert('Please enter a GitHub username');
+  }
+};
+var buttonClickHandler = function(event){
+  var language = event.target.getAttribute("data-language");
+  
+  if (language) {
+    getFeaturedRepos(language);
+    //clear old content
+    repoContainerEl.textContent = "";
+  }
+  };
 //format the api url and make url request
 var getWeatherApi = function() {
     var requestUrl =' http://api.openweathermap.org/data/2.5/weather?q={city name},{state code}&appid={apiKey}'
@@ -45,7 +57,7 @@ var getWeatherApi = function() {
     }
   });
 /* a way to dispay weather */
-  var displayRepos = function (repos, searchTerm) {
+  var displayWeather = function (repos, searchTerm) {
     if (repos.length === 0) {
       repoContainerEl.textContent = 'No repositories found.';
       return;
