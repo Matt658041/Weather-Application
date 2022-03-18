@@ -1,23 +1,23 @@
 // declare variables with document.query selector and span list
-var weather ={};
-
+var weatherList = document.querySelector('#dashboard')
+var fiveDay = document.querySelectorAll('.fiveday')
 var apiKey = 'bf17cff4e387d5594892608f7ffa180a';
-var searchButton = document.querySelector('#search-btn');
+var searchButton = document.getElementById('search-btn');
 
  // Selectors for HTML elements to display weather information
- var cityEl = $('h2#city');
- var dateEl = $('h3#date');
- var weatherIconEl = $('img#weather-icon');
- var temperatureEl = $('span#temperature');
- var humidityEl = $('span#humidity');
- var windEl = $('span#wind');
- var uvIndexEl = $('span#uv-index');
- var cityListEl = $('div.cityList');
+ var cityEl = document.querySelector('#city');
+ var dateEl = document.querySelector('#date');
+ var weatherIconEl = document.querySelector('#weather-icon');
+ var temperatureEl = document.querySelector('#temperature');
+ var humidityEl = document.querySelector('#humidity');
+ var windEl = document.querySelector('#wind');
+ var uvIndexEl = document.querySelector('#uv-index');
+ var cityListEl = document.querySelector('.cityList');
 
 
 
   // append span and p element to parent li
-  taskLi.append(taskSpan, taskP);
+  weatherList.append(taskSpan, taskP);
 
 
   // append to ul list on the page
@@ -39,10 +39,7 @@ var getWeatherApi = function() {
   })
   .then(function(data) {
     for (var i = 0; i < data.length; i++) {
-      var listItem = document.createElement('span');
-      console.log(data[i].url);
-      console.log(data[i].user.login);
-
+      var listItem = document.createElement('li');
       listItem.textContent = data[i].html_url;
       tempList.appendChild(listItem);
     }
@@ -78,16 +75,7 @@ var getWeatherApi = function() {
         statusEl.innerHTML = "<i class='fas fa-check-square status-icon icon-success'></i>";
       }
   
-      repoEl.appendChild(statusEl);
-  
-      repoContainerEl.appendChild(repoEl);
-  
-
-
-
-
-
- /*  create a save to local storage  */
+       /*  create a save to local storage  */
  var saveData = function() {
   localStorage.setItem("weather", JSON.stringify(tasks));
 };
@@ -95,4 +83,4 @@ var getWeatherApi = function() {
   saveData()
 };
 // and button click event handler
-searchButton.addEventListener('click', getWeatherApi)
+searchButton.addEventListener('click', getWeatherApi);
